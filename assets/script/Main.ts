@@ -1,4 +1,4 @@
-import { getUserInfo } from "./base/BaseFunction";
+import { getUserInfo, selfOpenId } from "./base/BaseFunction";
 import { Message } from "./Message";
 
 /**
@@ -27,7 +27,7 @@ export class Main extends cc.Component {
     async eval(msg: Message) {
         switch (msg.typeName) {
             case "ShowUserInfo": {
-                this.infoLabel.string = JSON.stringify(await getUserInfo());
+                this.infoLabel.string = JSON.stringify(await getUserInfo(selfOpenId));
                 break;
             }
             case "HideUserInfo": {

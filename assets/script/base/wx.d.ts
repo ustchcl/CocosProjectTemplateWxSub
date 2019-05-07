@@ -276,30 +276,30 @@ declare const wx: {
     /**
      * 在无须用户授权的情况下，批量获取用户信息。该接口只在开放数据域下可用
      */
-    getUserInfo(object: { openIdList: any[], lang: string, success: (res: any) => void, fail: (res: any) => void, complete: (res: any) => void }): void;
+    getUserInfo(object: { openIdList: any[], lang?: string, success: (res: any) => void, fail: (res: any) => void, complete?: (res: any) => void }): void;
     getSetting(object: { success: (res: any) => void, fail: (res: any) => void, complete: (res: any) => void }): void;
     openSetting(object: { success: (res: any) => void, fail: (res: any) => void, complete: (res: any) => void }): void;
     getWeRunData(object: { success: (res: any) => void, fail: (res: any) => void, complete: (res: any) => void }): void;
     /**
      * 拉取当前用户所有同玩好友的托管数据。该接口只可在开放数据域下使用
      */
-    getFriendCloudStorage(object: { keyList: any[], success: (res: any) => void, fail: (res: any) => void, complete: (res: any) => void }): void;
+    getFriendCloudStorage(object: { keyList: any[], success: (res: any) => void, fail: (res: any) => void, complete?: (res: any) => void }): void;
     /**
      * 在小游戏是通过群分享卡片打开的情况下，可以通过调用该接口获取群同玩成员的游戏数据。该接口只可在开放数据域下使用。
      */
-    getGroupCloudStorage(object: { shareTicket: string, keyList: any[], success: (res: any) => void, fail: (res: any) => void, complete: (res: any) => void }): void;
+    getGroupCloudStorage(object: { shareTicket: string, keyList: any[], success: (res: any) => void, fail: (res: any) => void, complete?: (res: any) => void }): void;
     /**
      * 获取当前用户托管数据当中对应 key 的数据。该接口只可在开放数据域下使用
      */
-    getUserCloudStorage(object: { keyList: any[], success: (res: any) => void, fail: (res: any) => void, complete: (res: any) => void }): void;
+    getUserCloudStorage(object: { keyList: any[], success: (res: any) => void, fail: (res: any) => void, complete?: (res: any) => void }): void;
     /**
      * 删除用户托管数据当中对应 key 的数据。
      */
-    removeUserCloudStorage(object: { keyList: any[], success: (res: any) => void, fail: (res: any) => void, complete: (res: any) => void }): void;
+    removeUserCloudStorage(object: { keyList: any[], success: (res: any) => void, fail: (res: any) => void, complete?: (res: any) => void }): void;
     /**
      * 对用户托管数据进行写数据操作，允许同时写多组 KV 数据。
      */
-    setUserCloudStorage(object: { KVDataList: any[], success: (res: any) => void, fail: (res: any) => void, complete: (res: any) => void }): void;
+    setUserCloudStorage(object: { KVDataList: any[], success: (res: any) => void, fail: (res: any) => void, complete?: (res: any) => void }): void;
     /**
      * 获取开放数据域
      */

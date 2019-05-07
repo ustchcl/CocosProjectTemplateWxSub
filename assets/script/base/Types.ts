@@ -13,7 +13,7 @@ export function gender(g: 1 | 2 | 0): Gender {
 export interface UserInfo {
     openId: string;
     nickName: string;
-    gender: Gender;
+    gender: 0 | 1 | 2;
     city: string;
     avatarUrl: string;
     country: string;
@@ -30,3 +30,10 @@ export const unit: Unit = "Symbol_Unit";
 export type Type<T, U> = {typeName: T, value: U};
 export type TypeUnit<T> = Type<T, Unit>
 
+export type KVData = {key: string, value: string};
+
+export type UserGameData = {
+    avatarUrl: string;  // 用户的微信头像 url
+    nickname: string;   // 用户的微信昵称
+    KVDataList: KVData [];  // 用户的托管 KV 数据列表
+}
